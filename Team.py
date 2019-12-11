@@ -6,6 +6,11 @@ class Team:
         self.check_point_3 = check_point_3
         self.check_point_4 = check_point_4
         self.check_point_5 = check_point_5
+        self.bonus_1 = 0
+        self.bonus_2 = 0
+        self.bonus_3 = 0
+        self.bonus_4 = 0
+        self.bonus_5 = 0
         self.total_point = 0
 
     def calc_check_point(self):
@@ -50,10 +55,24 @@ class Team:
         if (self.check_point_5 > 0):
             self.total_point += 10
 
-    def bonus_point(self, point_bonus):
-        self.total_point += point_bonus
+    def set_bonus_1(self, point):
+        self.bonus_1 = point
+
+    def set_bonus_2(self, point):
+        self.bonus_2 = point
+
+    def set_bonus_3(self, point):
+        self.bonus_3 = point
+
+    def set_bonus_4(self, point):
+        self.bonus_4 = point
+
+    def set_bonus_5(self, point):
+        self.bonus_5 = point
 
     def get_info(self):
         info = self.team_name + "," + str(self.check_point_1) + "," + str(self.check_point_2) + "," + \
-               str(self.check_point_3) + "," + str(self.check_point_4) + "," + str(self.check_point_5) + "," + str(self.total_point) + "\n"
+               str(self.check_point_3) + "," + str(self.check_point_4) + "," + str(self.check_point_5) + "," +\
+               str(self.bonus_1) + "," + str(self.bonus_2) + "," + str(self.bonus_3) + "," + str(self.bonus_4) + "," + \
+               str(self.bonus_5) + "," + str(self.total_point) + "\n"
         return info

@@ -28,38 +28,35 @@ if __name__ == "__main__":
     all_team.sort(key=lambda x: x.check_point_1, reverse=False)
     for i in range(len(all_team)):
         if(i < 5):
-            all_team[i].bonus_point(5-i)
+            all_team[i].set_bonus_1(5-i)
 
     # check point 2
     all_team.sort(key=lambda x: x.check_point_2, reverse=False)
     for i in range(len(all_team)):
         if (i < 5):
-            all_team[i].bonus_point(5 - i)
+            all_team[i].set_bonus_2(5 - i)
 
     # check point 3
     all_team.sort(key=lambda x: x.check_point_3, reverse=False)
     for i in range(len(all_team)):
         if (i < 5):
-            all_team[i].bonus_point(5 - i)
+            all_team[i].set_bonus_3(5 - i)
 
     # check point 4
     all_team.sort(key=lambda x: x.check_point_4, reverse=False)
     for i in range(len(all_team)):
         if (i < 5):
-            all_team[i].bonus_point(5 - i)
+            all_team[i].set_bonus_4(5 - i)
 
     # check point 5
     all_team.sort(key=lambda x: x.check_point_5, reverse=False)
     for i in range(len(all_team)):
         if (i < 5):
-            all_team[i].bonus_point(5 - i)
-
-    # rank
-    all_team.sort(key=lambda x: x.total_point, reverse=True)
+            all_team[i].set_bonus_5(5 - i)
 
     # save result
     fw = open(path + "/result.csv", "a")
-    fw.write("team_name,cp_1,cp_2,cp_3,cp_4,cp_5,total\n")
+    fw.write("team_name,cp_1,cp_2,cp_3,cp_4,cp_5,bn_1,bn_2,bn_3,bn_4,bn_5,total\n")
     fw.close()
     for result in all_team:
         fw = open(path+"/result.csv", "a")
