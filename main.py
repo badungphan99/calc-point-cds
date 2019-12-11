@@ -1,16 +1,21 @@
-import glob
+import argparse
 import os
 from Team import Team
-
-path = "/Users/dungpb/Downloads/result"
 
 all_team = []
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', '--path', type=str)
+
+    args = vars(parser.parse_args())
+
+    path = args["path"]
+
     for r, d, f in os.walk(path):
         for file in f:
             if '.txt' in file:
-                # files.append(os.path.join(r, file))
                 team_name = file[0:-4]
                 check_point = []
                 with open(os.path.join(r, file)) as data:
