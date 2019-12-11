@@ -2,7 +2,7 @@ import glob
 import os
 from Team import Team
 
-path = "/home/dungpb/testresult"
+path = "/Users/dungpb/Downloads/result"
 
 all_team = []
 

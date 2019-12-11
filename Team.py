@@ -38,6 +38,12 @@ class Team:
         else:
             self.check_point_5 -= self.check_point_4
 
+        self.check_point_1 = round(self.check_point_1, 4)
+        self.check_point_2 = round(self.check_point_2, 4)
+        self.check_point_3 = round(self.check_point_3, 4)
+        self.check_point_4 = round(self.check_point_4, 4)
+        self.check_point_5 = round(self.check_point_5, 4)
+
     def calc_point(self):
         # check point 1
         if (self.check_point_1 != 999):
