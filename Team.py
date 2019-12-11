@@ -40,20 +40,20 @@ class Team:
 
     def calc_point(self):
         # check point 1
-        if(self.check_point_1 > 0):
-            self.total_point += 10
+        if (self.check_point_1 != 999):
+            self.total_point += 15
         # check point 2
-        if (self.check_point_2 > 0):
-            self.total_point += 10
+        if (self.check_point_2 != 999):
+            self.total_point += 15
         # check point 3
-        if (self.check_point_3 > 0):
-            self.total_point += 10
+        if (self.check_point_3 != 999):
+            self.total_point += 15
         # check point 4
-        if (self.check_point_4 > 0):
-            self.total_point += 10
+        if (self.check_point_4 != 999):
+            self.total_point += 15
         # check point 5
-        if (self.check_point_5 > 0):
-            self.total_point += 10
+        if (self.check_point_5 != 999):
+            self.total_point += 15
 
     def set_bonus_1(self, point):
         self.bonus_1 = point
