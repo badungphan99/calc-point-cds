@@ -14,29 +14,32 @@ class Team:
         self.total_point = 0
 
     def calc_check_point(self):
+        # check point 1
+        if (self.check_point_1 <= 0):
+            self.check_point_1 = 999
         # check point 2
-        if(self.check_point_2 - self.check_point_1 < 0):
+        if(self.check_point_2 - self.check_point_1 <= 0):
             self.check_point_2 = 999
         else:
             self.check_point_2 -= self.check_point_1
 
         # check point 3
-        if (self.check_point_3 - self.check_point_2 < 0):
+        if (self.check_point_3 - self.check_point_2 <= 0):
             self.check_point_3 = 999
         else:
-            self.check_point_3 -= self.check_point_2
+            self.check_point_3 -= (self.check_point_2 + self.check_point_1)
 
         # check point 4
-        if (self.check_point_4 - self.check_point_3 < 0):
+        if (self.check_point_4 - self.check_point_3 <= 0):
             self.check_point_4 = 999
         else:
-            self.check_point_4 -= self.check_point_3
+            self.check_point_4 -= (self.check_point_3 + self.check_point_2 + self.check_point_1)
 
         # check point 5
-        if (self.check_point_5 - self.check_point_4 < 0):
+        if (self.check_point_5 - self.check_point_4 <= 0):
             self.check_point_5 = 999
         else:
-            self.check_point_5 -= self.check_point_4
+            self.check_point_5 -= (self.check_point_4 + self.check_point_3 + self.check_point_2 + self.check_point_1)
 
         self.check_point_1 = round(self.check_point_1, 4)
         self.check_point_2 = round(self.check_point_2, 4)
